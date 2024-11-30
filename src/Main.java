@@ -1,42 +1,23 @@
-/*public class Main {
+import java.util.Objects;
+import java.util.Scanner;
+
+public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world!");
-    }
-}
-*/
-import java.io.*;
-
-// Driver Class
-class GFG {
-    // main function
-    public static void main(String[] args)
-    {
-        try {
-            // FileReader Class used
-            FileReader fileReader
-                    = new FileReader("mensagens.tsv");
-
-            System.out.println("Reading char by char : \n");
-            int i;
-
-            // Using read method
-            while ((i = fileReader.read()) != -1) {
-                System.out.print((char)i);
-            }
-
-            System.out.println("Reading using array : \n");
-            char[] charArray = new char[10000];
-
-            // Using read method for to get character array
-            fileReader.read(charArray);
-            System.out.print(charArray);
-
-            // Close method called
-            fileReader.close();
-            System.out.println("FileReader closed!");
+        Dados dados = new Dados();
+        Frases listaFrases = new Frases(300);
+        dados.getDados(listaFrases);
+        Frase teste = listaFrases.sortFrase();
+        Frase teste2 = listaFrases.sortFrase();
+        System.out.println(teste.getFrase());
+        Scanner input = new Scanner(System.in);
+        String resposta = input.next();
+        if(Objects.equals(resposta, teste.getAutor())) {
+            System.out.println("acertou!");
+        }else {
+            System.out.println("errou! o correto era:");
+            System.out.println(teste.getAutor());
         }
-        catch (Exception e) {
-            System.out.println(e);
-        }
+        //listaFrases.printFrases();
+        input.close();
     }
 }

@@ -13,6 +13,10 @@ public class Frase {
         this.autor = autor;
     }
 
+    public Frase copy() {
+        return new Frase(this.frase, this.autor);
+    }
+
     public String getFrase() {
         return frase;
     }
