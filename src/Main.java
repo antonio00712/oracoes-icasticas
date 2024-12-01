@@ -6,6 +6,7 @@ public class Main {
         Dados dados = new Dados();
         Frases listaFrases = new Frases(300);
         dados.getDados(listaFrases);
+        /*
         Frase teste = listaFrases.sortFrase();
         Frase teste2 = listaFrases.sortFrase();
         System.out.println(teste.getFrase());
@@ -19,5 +20,9 @@ public class Main {
         }
         //listaFrases.printFrases();
         input.close();
+        */
+
+        Visual visual = new Visual(listaFrases);
+        visual.iniciar();
     }
 }
