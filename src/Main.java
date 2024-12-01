@@ -6,6 +6,7 @@ public class Main {
         Dados dados = new Dados();
         Frases listaFrases = new Frases(300);
         dados.getDados(listaFrases);
+
         /*
         Frase teste = listaFrases.sortFrase();
         Frase teste2 = listaFrases.sortFrase();
@@ -18,11 +19,16 @@ public class Main {
             System.out.println("errou! o correto era:");
             System.out.println(teste.getAutor());
         }
-        //listaFrases.printFrases();
+        //
         input.close();
-        */
 
+         */
+
+        listaFrases.printFrases();
         Visual visual = new Visual(listaFrases);
+        visual.playSound("inicioST.wav");
         visual.iniciar();
     }
+
+
 }

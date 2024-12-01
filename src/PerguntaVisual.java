@@ -27,7 +27,6 @@ public class PerguntaVisual extends JFrame {
         // Title
         JPanel t = new JPanel();
         t.setLayout(new FlowLayout(FlowLayout.CENTER));
-
         t.add(new JLabel("Quem disse essa frase?"));
 
         // Question
@@ -110,7 +109,7 @@ public class PerguntaVisual extends JFrame {
         add(p, BorderLayout.CENTER);
         add(b, BorderLayout.PAGE_END);
 
-        setMinimumSize(new Dimension(720, 200));
+        setMinimumSize(new Dimension(750, 200));
 
         Dimension objDimension = Toolkit.getDefaultToolkit().getScreenSize();
         int coordX = (objDimension.width - getWidth()) / 2;
